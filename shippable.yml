@@ -14,3 +14,7 @@ build:
 
   post_ci:
     - echo "true"
+  pre_ci_boot:
+    image_name: drydock/u14cppall
+    image_tag: master
+    pull: true
