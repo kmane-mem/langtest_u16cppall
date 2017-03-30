@@ -3,11 +3,7 @@ language: c
 compiler:
   - gcc
   - clang
-services:
- # - cassandra 
-  - elasticsearch 
-  
- 
+
 build:
   pre_ci:
     - echo 'true'
