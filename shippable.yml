@@ -7,7 +7,7 @@ compiler:
 build:
   pre_ci:
     - echo 'true'
-
+ 
   ci:
     - ./configure && make && make install
     - ./hello
