@@ -3,17 +3,41 @@ language: c
 compiler:
   - gcc
   - clang
+  
+services:
+ # - cassandra 
+ # - elasticsearch 
+ # - memcached 
+ # - mongodb 
+  - mysql 
+ # - neo4j 
+  - postgres 
+ # - rabbitmq 
+ # - redis 
+  - selenium 
+ # - sqlite 
+ # - couchdb 
+  - rethinkdb 
+ # - riak
+ 
 build:
   pre_ci:
     - echo 'true'
- 
-  ci:
-    - ./configure && make && make install
-    - ./hello
-
-  post_ci:
-    - echo "true"
+  
   pre_ci_boot:
     image_name: drydock/u14cppall
     image_tag: master
     pull: true
+ 
+  ci:
+    - ./configure && make && make install
+    - ./hello
+    - echo $SHIPPABLE_MYSQL_BINARY
+    - echo $SHIPPABLE_POSTGRES_BINARY
+    - echo $SHIPPABLE_SELENIUM_BINARY
+    - echo $SHIPPABLE_RETHINKDB_BINARY
+
+  post_ci:
+    - echo "true"
+    
+  
