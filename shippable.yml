@@ -15,11 +15,11 @@ build:
     pull: true
  
   ci:
+    - ls
+    - pwd
     - ./configure && make && make install
     - ./hello
-    - ls
-    - pwd 
-
+    
   post_ci:
     - echo "true"
     
