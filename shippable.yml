@@ -4,21 +4,6 @@ compiler:
   - gcc
   - clang
   
-services:
- # - cassandra 
- # - elasticsearch 
- # - memcached 
- # - mongodb 
-  - mysql 
- # - neo4j 
-  - postgres 
- # - rabbitmq 
- # - redis 
-  - selenium 
- # - sqlite 
- # - couchdb 
-  - rethinkdb 
- # - riak
  
 build:
   pre_ci:
