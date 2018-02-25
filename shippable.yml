@@ -21,10 +21,10 @@ build:
     - docker ps
    # - docker build -t=test .
     - docker images 
-    - ls
-    - pwd
-    - ./configure && make && make install
-    - ./hello
+   # - ls
+   # - pwd
+   # - ./configure && make && make install
+    #- ./hello
     
   post_ci:
     - echo "true"
