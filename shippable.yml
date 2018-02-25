@@ -4,17 +4,23 @@ compiler:
   - gcc
   - clang
   
- 
+runtime:
+  nodePool: custom__aarch64__Ubuntu_16_04
+
 build:
   pre_ci:
     - echo 'true'
-  
+    
   pre_ci_boot:
-    image_name: drydock/u16cppall
+    image_name: drydockaarch64/u16cppall
     image_tag: master
     pull: true
- 
+    
   ci:
+    - python -V
+    - docker ps
+   # - docker build -t=test .
+    - docker images 
     - ls
     - pwd
     - ./configure && make && make install
@@ -22,5 +28,4 @@ build:
     
   post_ci:
     - echo "true"
-    
-  
+   
