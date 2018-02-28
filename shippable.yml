@@ -5,14 +5,14 @@ compiler:
   - clang
   
 runtime:
-  nodePool: custom__aarch64__Ubuntu_16_04
-
+  nodePool: custom__x86_64__CentOS_7
+  
 build:
   pre_ci:
     - echo 'true'
     
   pre_ci_boot:
-    image_name: drydockaarch64/u16cppall
+    image_name: drydock/c7cppall
     image_tag: master
     pull: true
     
