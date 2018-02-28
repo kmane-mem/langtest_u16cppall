@@ -27,5 +27,5 @@ build:
     #- ./hello
     
   post_ci:
-    - echo "true"
+    - echo 'true'
    
